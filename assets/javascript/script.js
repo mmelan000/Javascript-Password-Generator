@@ -69,12 +69,11 @@ function generatePassword() {
 
 }
 // password genertor logic
-  // generatePassword();
-
-
 
 // Write password to the #password input
 function writePassword() {
+
+  document.getElementById('toggle').style.display = 'block'
 
   var sC = document.getElementById('sC').checked;
   var lC = document.getElementById('lC').checked;
