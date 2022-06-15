@@ -17,6 +17,11 @@ body {
   background-color: #f9fbfd;
 }
 
+span {
+  font-size: 80%;
+  filter: invert(50%);
+}
+
 .wrapper {
   padding-top: 30px;
   padding-left: 20px;

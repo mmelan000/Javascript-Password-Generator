@@ -15,6 +15,29 @@
       <div class="card">
         <div class="card-header">
           <h2>Generate a Password</h2>
+          <form>
+            <label>Length: <span>Must be between 8 and 128</span></label>
+            <input type="text" id="size">
+            <fieldset>
+              <legend>Choose your included characters: <span>Must select at least one</span></legend>        
+              <div>
+                <input type="checkbox" id="sC">
+                <label for="sC">Special</label>
+              </div>
+              <div>
+                <input type="checkbox" id="lC">
+                <label for="sC">Lower Case</label>
+              </div>
+              <div>
+                <input type="checkbox" id="uC">
+                <label for="sC">Upper Case</label>
+              </div>
+              <div>
+                <input type="checkbox" id="nC">
+                <label for="sC">Numbers</label>
+              </div>
+          </fieldset>
+          </form>
         </div>
         <div class="card-body">
           <textarea
