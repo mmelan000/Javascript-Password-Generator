@@ -28,10 +28,12 @@ function generatePassword() {
       return a;
     } else if (size < 8) {
         alert("Please choose a number greater then 7.");
-        return;
+        a = "Please choose a number greater then 7.";
+        return a;
       } else if  (size > 128) {
           alert("Please choose a number less then 129.");
-          return;
+          a = "Please choose a number less then 129.";
+          return a;
         } else {
           var sC = confirm("Would you like to include special characters?");
             if (sC) {
