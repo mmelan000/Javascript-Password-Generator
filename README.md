@@ -46,9 +46,9 @@ THEN the password is either displayed in an alert or written to the page
 
 ## Optimizations
 
-Minimalistic approach to compiling desired characters.
-Removed ability for undefined to appear in results bar, instead displaying the problem.
-Removed redundant code in favor of functions, loops, and if/else if statements.
+- Minimalistic approach to compiling desired characters.
+- Removed ability for undefined to appear in results bar, instead displaying the problem.
+- Removed redundant code in favor of functions, loops, and if/else if statements.
 
 ---
 
