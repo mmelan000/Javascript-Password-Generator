@@ -26,14 +26,17 @@ function generatePassword() {
     if (size === null){
       a = "Please choose a length of 8 to 128."
       return a;
+      // returns error to prompts and doc
     } else if (size < 8) {
         alert("Please choose a number greater then 7.");
         a = "Please choose a number greater then 7.";
         return a;
+        // returns error to prompts and doc
       } else if  (size > 128) {
           alert("Please choose a number less then 129.");
           a = "Please choose a number less then 129.";
           return a;
+          // returns error to prompts and doc
         } else {
           var sC = confirm("Would you like to include special characters?");
             if (sC) {
@@ -54,21 +57,26 @@ function generatePassword() {
             if (nC) {
               b = b.concat(number);
               };
+              // compiles selected characters into single array
 
           var noSelection = [sC, lC, uC, nC]
             
           function allAreFalse(arr) {
             return arr.every(element => element === false);
           }  
+          // checks if no character options were selected
             
           if (allAreFalse(noSelection)) {
             a = "Please select at least one type of character."
             return a;
+            // returns error to prompts and doc
             } else {
               for (var i = 0; i < size; i++) {
                 a = a + b[Math.floor(Math.random() * b.length)];
             }
+            // generates random password based on criteria
             return a;
+            // returns generated password to doc
           }
         }    
 }
@@ -79,7 +87,7 @@ function generatePassword() {
     var passwordText = document.querySelector("#password");
     passwordText.value = password;
   }
-
+// generates password and sends to document
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 // adds click to l28 on index.html and runs writePassword script
