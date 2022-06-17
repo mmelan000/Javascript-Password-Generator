@@ -1,7 +1,4 @@
-# 03 JavaScript: Password Generator
-
-
-# Challenge-02-Advanced-CSS-Portfolio
+# Challenge-03-Javascript-Password-Generator
 
 The objective of this assignment is to build a random password generator using the preassigned assets that also meets all of the AC:
 
