@@ -2,122 +2,89 @@
 var generateBtn = document.querySelector("#generate");
 // linked to id on l28 of index.html
 
-var specialcharacter = ["~", "`", "!", " ", "@", "#", "$", "%", "^", "&", "*", "(", ")", "_", "-", "+", "=", "{", "[", "}", "]", "|", ":", ";", "'", "<", ",", ">", ".", "?", "/"];
-console.log(specialcharacter)
+var specialCharacter = ["~", "`", "!", " ", "@", "#", "$", "%", "^", "&", "*", "(", ")", "_", "-", "+", "=", "{", "[", "}", "]", "|", ":", ";", "'", "<", ",", ">", ".", "?", "/", '"', "\\"];
 // array for special character
 
 var lowerCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
-console.log(lowerCase)
 // array for alphabet: lower case
 
 var upperCase = lowerCase.map(element => {
   return element.toUpperCase();
 });
 // array for alphabet: upper case
-console.log(upperCase)
 
 var number = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
-console.log(number)
 // array for numbers
 
-// var size = 0;
-// var sC = true;
-// var lC = true;
-// var uC = true;
-// var nC = true;
 
-
-
+// password genertor logic
 function generatePassword() {
-
-  var size = document.getElementById('size').value;
-  var sC = document.getElementById('sC').checked;
-  var lC = document.getElementById('lC').checked;
-  var uC = document.getElementById('uC').checked;
-  var nC = document.getElementById('nC').checked;
   var a = "";
   var b = [];
-  
-  console.log (b);
 
-  if (sC) {
-  b = b.concat(specialcharacter);
-  };
-  console.log(b);
+  var size = prompt("Please choose a length of 8 to 128.", "8");
+  console.log(size)
+    if (size === null){
+      a = "Please choose a length of 8 to 128."
+      return a;
+    } else if (size < 8) {
+        alert("Please choose a number greater then 7.");
+        return;
+      } else if  (size > 128) {
+          alert("Please choose a number less then 129.");
+          return;
+        } else {
+          var sC = confirm("Would you like to include special characters?");
+            if (sC) {
+              b = b.concat(specialCharacter);
+              };
 
- if (lC) {
-  b = b.concat(lowerCase);
-  };
-  console.log(b);
+          var lC = confirm("Would you like to include lowercase characters?");
+            if (lC) {
+              b = b.concat(lowerCase);
+              };
 
-  if (uC) {
-    b = b.concat(upperCase);
-  };
-  console.log(b);
-  
-  if (nC) {
-    b = b.concat(number);
-  };
-  console.log(b);
+          var uC = confirm("Would you like to include uppercase characters?");
+            if (uC) {
+              b = b.concat(upperCase);
+              };
 
-  for (var i = 0; i < size; i++) {
-        console.log (i);
-        a = a + b[Math.floor(Math.random() * b.length)];
-        console.log(a);
-  }
-  return a;
+          var nC = confirm("Would you like to include numerical characters?");
+            if (nC) {
+              b = b.concat(number);
+              };
 
+          var noSelection = [sC, lC, uC, nC]
+            console.log(noSelection)
+            
+          function allAreFalse(arr) {
+            return arr.every(element => element === false);
+          }
+          console.log(allAreFalse(noSelection));  
+            
+          if (allAreFalse(noSelection)) {
+            a = "Please select at least one type of character."
+            return a;
+            } else {
+              for (var i = 0; i < size; i++) {
+                console.log (i);
+                a = a + b[Math.floor(Math.random() * b.length)];
+                console.log(a);
+            }
+            return a;
+          }
+        }    
 }
-// password genertor logic
-
-// Write password to the #password input
-function writePassword() {
-
-  document.getElementById('toggle').style.display = 'block'
-
-  var sC = document.getElementById('sC').checked;
-  var lC = document.getElementById('lC').checked;
-  var uC = document.getElementById('uC').checked;
-  var nC = document.getElementById('nC').checked;
   
-  var nochecks = [sC, lC, uC, nC]
-  console.log(nochecks)
-
-  function allAreFalse(arr) {
-    return arr.every(element => element === false);
-  }
-  console.log(allAreFalse(nochecks));
-
-
-  if (document.getElementById('size').value < 8) {
-    var password = "Please choose a length greater then 7.";
-    var passwordText = document.querySelector("#password");
-    passwordText.value = password;
-    return;
-    // checks to see if size is below 8, if true, returns error to user
-  } else if (document.getElementById('size').value > 128) {
-    var password = "Please choose a length less then 129."
-    var passwordText = document.querySelector("#password");
-    passwordText.value = password;
-    return;
-    // checks to see if size is above 129, if true, returns error to user
-  } else if (allAreFalse(nochecks)) {
-      var password = "Please select at least one type of character.";
-      var passwordText = document.querySelector("#password");
-      passwordText.value = password;
-      return;
-      // checks to see if no checkboxes have been ticked, if true, returns error to user
-  } else {
+  function writePassword() {
+  
     var password = generatePassword();
     console.log(password);
     var passwordText = document.querySelector("#password");
     console.log(passwordText);
     passwordText.value = password;
   }
-}
-
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 // adds click to l28 on index.html and runs writePassword script
-

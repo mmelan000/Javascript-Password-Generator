@@ -102,10 +102,6 @@ button[disabled] {
   float: right;
 }
 
-#toggle {
-  display: none;
-}
-
 #password {
   -webkit-appearance: none;
   -moz-appearance: none;
