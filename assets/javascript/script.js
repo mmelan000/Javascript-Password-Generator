@@ -23,7 +23,6 @@ function generatePassword() {
   var b = [];
 
   var size = prompt("Please choose a length of 8 to 128.", "8");
-  console.log(size)
     if (size === null){
       a = "Please choose a length of 8 to 128."
       return a;
@@ -55,21 +54,17 @@ function generatePassword() {
               };
 
           var noSelection = [sC, lC, uC, nC]
-            console.log(noSelection)
             
           function allAreFalse(arr) {
             return arr.every(element => element === false);
-          }
-          console.log(allAreFalse(noSelection));  
+          }  
             
           if (allAreFalse(noSelection)) {
             a = "Please select at least one type of character."
             return a;
             } else {
               for (var i = 0; i < size; i++) {
-                console.log (i);
                 a = a + b[Math.floor(Math.random() * b.length)];
-                console.log(a);
             }
             return a;
           }
@@ -79,9 +74,7 @@ function generatePassword() {
   function writePassword() {
   
     var password = generatePassword();
-    console.log(password);
     var passwordText = document.querySelector("#password");
-    console.log(passwordText);
     passwordText.value = password;
   }
 
