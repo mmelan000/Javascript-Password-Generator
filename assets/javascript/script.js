@@ -2,7 +2,7 @@
 var generateBtn = document.querySelector("#generate");
 // linked to id on l28 of index.html
 
-var specialCharacter = "~`! @#$%^&*()_-+={[}]|:;'<,>.?/\\".split('')
+var specialCharacter = "~`! @#$%^&*()_-+=\"{}[]|:;'<>,.?/\\".split('');
 // array for special character
 
 var lowerCase = "abcdefghijklmnopqrstuvwxyz".split('')
