@@ -2,10 +2,10 @@
 var generateBtn = document.querySelector("#generate");
 // linked to id on l28 of index.html
 
-var specialCharacter = ["~", "`", "!", " ", "@", "#", "$", "%", "^", "&", "*", "(", ")", "_", "-", "+", "=", "{", "[", "}", "]", "|", ":", ";", "'", "<", ",", ">", ".", "?", "/", '"', "\\"];
+var specialCharacter = "~`! @#$%^&*()_-+={[}]|:;'<,>.?/\\".split('')
 // array for special character
 
-var lowerCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+var lowerCase = "abcdefghijklmnopqrstuvwxyz".split('')
 // array for alphabet: lower case
 
 var upperCase = lowerCase.map(element => {
@@ -13,7 +13,7 @@ var upperCase = lowerCase.map(element => {
 });
 // array for alphabet: upper case
 
-var number = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+var number = "0123456789".split('');
 // array for numbers
 
 
