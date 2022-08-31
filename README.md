@@ -34,10 +34,10 @@ THEN the password is either displayed in an alert or written to the page
 ## Table of Contents  
 1. [Description](#description)
 2. [Deployment](#deployment)
-2. [Optimizations](#optimizations)
-3. [Contributing](#contributing)  
-4. [Questions](#questions)  
-5. [License](#license)
+3. [Optimizations](#optimizations)
+4. [Contributing](#contributing)  
+5. [Questions](#questions)  
+6. [License](#license)
 
 ## Deployment
 
