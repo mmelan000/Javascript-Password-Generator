@@ -1,6 +1,9 @@
-# Challenge-03-Javascript-Password-Generator
+# Javascript-Password-Generator
+[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)   
 
-The objective of this assignment is to build a random password generator using the preassigned assets that also meets all of the AC:
+## Description  
+
+The objective of this challenge is to build a random password generator using the preassigned assets that also meets all of the AC:
 
 **User Story**
 ```
@@ -28,18 +31,19 @@ WHEN the password is generated
 THEN the password is either displayed in an alert or written to the page
 ```
 
+## Table of Contents  
+1. [Description](#description)
+2. [Deployment](#deployment)
+2. [Optimizations](#optimizations)
+3. [Contributing](#contributing)  
+4. [Questions](#questions)  
+5. [License](#license)
 
-## Authors
+## Deployment
 
-- [@Michael Melanson](https://github.com/mmelan000)
+[Deployed Website](https://mmelan000.github.io/Javascript-Password-Generator/)
 
----
-
-## Screenshots
-
-![App Screenshot](./assets/images/img03.png)
-
----
+![App Screenshot](./assets/images/SS1.png)
 
 ## Optimizations
 
@@ -47,10 +51,18 @@ THEN the password is either displayed in an alert or written to the page
 - Removed ability for undefined to appear in results bar, instead displaying the problem.
 - Removed redundant code in favor of functions, loops, and if/else if statements.
 
----
+## Contributing  
 
-## Deployment
+Follow best practices for naming conventions, indentation, quality comments, etc.  
 
-https://mmelan000.github.io/Challenge-03-Javascript-Password-Generator/
+## Questions  
 
----
+If you have any questions, please reach out to me either on Github or by Email.
+  - **Github:** [mmelan000](https://github.com/mmelan000)
+  - **Email:** [m.melanson000@gmail.com](mailto:m.melanson000@gmail.com)
+
+## License  
+
+- [MIT](https://opensource.org/licenses/MIT)
+
+
